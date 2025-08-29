@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Munteh Mark | Portfolio</title>
+  <meta name="description" content="Portfolio of Munteh Mark — Junior Web Developer & Graphic Designer crafting beautiful, functional experiences." />
+  <meta name="theme-color" content="#0e0e0e" id="theme-color-meta" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <noscript>
+    <div class="noscript">This site works best with JavaScript enabled for animations and theme toggle.</div>
+  </noscript>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a href="#home" class="logo" aria-label="Go to home">Munteh Mark</a>
+
+    <nav class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul id="primary-nav" class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a href="#contact" class="btn btn-primary">Let’s Collaborate</a></li>
+        <li>
+          <button class="btn btn-ghost theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main>
+    <section id="home" class="section hero">
+      <div class="container hero-content">
+        <h1 class="headline">
+          Building digital <span class="gradient-text">experiences</span> that inspire
+        </h1>
+        <p class="lead">
+          Junior Web Developer & Graphic Designer crafting beautiful, functional websites
+          with clean code and creative design.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">View My Work</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+
+        <div class="skill-chips" aria-label="Core skills">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">PHP</span>
+          <span class="chip">C/C++</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">Vb.net</span>
+          <span class="chip">Adobe Illustrator</span>
+          <span class="chip">Adobe XD</span>
+          <span class="chip">Photoshop</span>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/Mark447-byte" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/mark-winter-3a7966377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_meduim=ios_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1B5oUQvAd1/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="mailto:markwinter412@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <!-- Replace with your real photo -->
+          <img src="Portrait.jpeg" alt="Portrait of Munteh Mark" loading="lazy" /
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">About Me</h2>
+          <p>
+            Hello! I’m <strong>Munteh Mark</strong>, a passionate junior web developer and graphic
+            designer on a journey of growth. I build clean, responsive websites with
+            <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>PHP</strong>,
+            and add creative flair through design.
+          </p>
+          <p>
+            Every project is an opportunity to learn and deliver meaningful digital experiences.
+            I love collaborating to bring ideas to life.
+          </p>
+          <div class="stats">
+            <div class="stat-card">
+              <h3>5+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+              <h3>1+</h3>
+              <p>Years Learning</p>
+            </div>
+            <div class="stat-card">
+              <h3>100%</h3>
+              <p>Dedication</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <p class="section-subtitle">A mix of development and creative design skills I’m growing with passion.</p>
+
+        <div class="skills-grid">
+          <!-- Skill card -->
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>HTML</h3><span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 90%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>CSS</h3><span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 85%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>JavaScript</h3><span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 70%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>PHP</h3><span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 60%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>MySQL</h3><span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 65%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-top">
+              <h3>Photoshop</h3><span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-bar"><span style="--val: 75%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">Some projects from my learning journey.</p>
+
+        <div class="portfolio-grid">
+          <!-- Project card 1 -->
+          <article class="project-card" tabindex="0">
+            <img src="project1.png" alt="Landing Page Design" loading="lazy"/>
+            <div class="overlay">
+              <h3>Landing Page Design</h3>
+              <p>Modern responsive landing page built with HTML, CSS & JS.</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary" aria-label="View live demo">Live</a>
+                <a href="#" class="btn btn-sm btn-outline" aria-label="View source code">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 2 -->
+          <article class="project-card" tabindex="0">
+            <img src="project2.png" alt="Portfolio Website" loading="lazy"/>
+            <div class="overlay">
+              <h3>Portfolio Website</h3>
+              <p>Clean and interactive portfolio template showcasing my work.</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary">Live</a>
+                <a href="#" class="btn btn-sm btn-outline">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 3 -->
+          <article class="project-card" tabindex="0">
+            <img src="project3.jpeg" alt="Graphic Design Showcase" loading="lazy"/>
+            <div class="overlay">
+              <h3>Graphic Design</h3>
+              <p>Creative poster & logo designs made using Photoshop.</p>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary">View</a>
+                <a href="#" class="btn btn-sm btn-outline">Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <p class="section-subtitle">What people say about working with me.</p>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <blockquote>
+              “Mark is a passionate and dedicated learner. He brings creativity and precision into every project!”
+            </blockquote>
+            <figcaption>— Mentor</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <blockquote>
+              “His portfolio designs are modern and eye-catching. Excited to see his growth!”
+            </blockquote>
+            <figcaption>— Fellow Developer</figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <blockquote>
+              “A problem solver with a creative mindset. He’s on his way to becoming a strong professional.”
+            </blockquote>
+            <figcaption>— Collaborator</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Call To Action ===== -->
+    <section class="section cta">
+      <div class="container">
+        <h2 class="cta-title">Let’s Build Something Amazing Together</h2>
+        <p class="cta-text">Got an idea or project? I’d love to hear about it and bring it to life.</p>
+        <a href="#contact" class="btn btn-light">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Let’s work together or just say hello! 👋</p>
+
+       <form class="contact-form" action="contact.php" method="POST" id="contactForm">
+  <div class="form-grid">
+    <label>
+      <span>Name</span>
+      <input type="text" name="name" placeholder="Your Name" required />
+    </label>
+    <label>
+      <span>Email</span>
+      <input type="email" name="email" placeholder="your@email.com" required />
+    </label>
+  </div>
+  <label class="form-full">
+    <span>Message</span>
+    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+  </label>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Send Message</button>
+    <p class="form-note" id="formResponse"></p>
+  </div>
+</form>
+
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 class="logo">Munteh Mark</h3>
+        <p class="footer-desc">Designing and building modern web experiences.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://github.com/Mark447-byte" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/mark-winter-3a7966377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_meduim=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/share/1B5oUQvAd1/?mibextid=wwXIfr" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Munteh Mark. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

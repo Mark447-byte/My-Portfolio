@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Munteh Mark | Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 30, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(162, 89, 247, 0.2);
+}
+
+header .logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #a259f7;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #a259f7, #6a11cb);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+header nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #a259f7, #6a11cb);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #6a11cb, #a259f7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #a259f7;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  color: #a259f7;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: linear-gradient(90deg, #a259f7, #6a11cb);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.4);
+}
+
+/* ===== Hero ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  background: radial-gradient(circle at top, #1a1a2e, #0e0e0e);
+}
+
+.hero h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #a259f7;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socials a {
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a259f7, #6a11cb);
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  transform: translateY(-3px) scale(1.1);
+  background: linear-gradient(135deg, #6a11cb, #a259f7);
+}
+
+/* ===== About Section ===== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 5rem 3rem;
+  background: #141414;
+}
+
+.about img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  border: 3px solid #a259f7;
+  box-shadow: 0 4px 20px rgba(162, 89, 247, 0.3);
+}
+
+.about-text h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #a259f7;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(106, 17, 203, 0.3);
+}
+
+.stat-card h3 {
+  font-size: 1.8rem;
+  color: #a259f7;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0a0a0a;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(162, 89, 247, 0.2);
+}
+
+footer p {
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-socials a {
+  color: #a259f7;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 5rem 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  color: #a259f7;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #bbb;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+/* ===== Skills ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.skill-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.skill-bar {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #a259f7, #6a11cb);
+  border-radius: 10px;
+}
+
+/* ===== Portfolio ===== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 1rem;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* ===== Contact ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.contact-form button {
+  align-self: center;
+}
+/* ===== Testimonials ===== */
+.testimonials {
+  background: #141414;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card h4 {
+  margin-top: 1rem;
+  color: #a259f7;
+  font-weight: bold;
+}
+
+/* ===== Call To Action ===== */
+.cta {
+  background: linear-gradient(135deg, #6a11cb, #a259f7);
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.cta a{
+    text-decoration: none;
+}
+
+</style>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <h2 class="logo">Munteh Mark</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+      <button class="btn-primary">Let’s Collaborate</button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Building digital <br> experiences that inspire</h1>
+      <p>Junior Web Developer & Graphic Designer crafting beautiful, functional websites with clean code and creative design.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">View My Work</button>
+        <button class="btn-outline">Learn More</button>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about" class="about">
+    <div class="about-image">
+      <img src="projects3.jpeg" alt="Munteh Mark">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello! I’m <b>Munteh Mark</b>, a passionate junior web developer and graphic designer on an exciting journey of growth. I specialize in creating responsive websites using <span>HTML, CSS, JavaScript, and PHP</span>, while adding a creative touch through graphic design.</p>
+      <p>Every project I work on is an opportunity to learn, improve, and deliver meaningful digital experiences. I love collaborating with others to bring ideas to life.</p>
+      <div class="stats">
+        <div class="stat-card">
+          <h3>10+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>2+</h3>
+          <p>Years Learning</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Dedication</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- ===== Skills Section ===== -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <p class="section-subtitle">A mix of development and creative design skills I’m growing with passion.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <div class="skill-bar"><span style="width: 90%"></span></div>
+      </div>
+      <div class="skill-card">
+        <h3>CSS</h3>
+        <div class="skill-bar"><span style="width: 85%"></span></div>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <div class="skill-bar"><span style="width: 70%"></span></div>
+      </div>
+      <div class="skill-card">
+        <h3>PHP</h3>
+        <div class="skill-bar"><span style="width: 60%"></span></div>
+      </div>
+      <div class="skill-card">
+        <h3>MySQL</h3>
+        <div class="skill-bar"><span style="width: 65%"></span></div>
+      </div>
+      <div class="skill-card">
+        <h3>Photoshop</h3>
+        <div class="skill-bar"><span style="width: 75%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Portfolio Section ===== -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <p class="section-subtitle">Here are some projects I’ve worked on as part of my learning journey.</p>
+    <div class="portfolio-grid">
+      <div class="project-card">
+        <img src="u.png" alt="Project 1">
+        <div class="overlay">
+          <h3>Landing Page Design</h3>
+          <p>A modern responsive landing page built with HTML, CSS & JS.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="project2.png" alt="Project 2">
+        <div class="overlay">
+          <h3>Portfolio Website</h3>
+          <p>Clean and interactive portfolio template showcasing my work.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="me.jpeg" alt="Project 3">
+        <div class="overlay">
+          <h3>Graphic Design</h3>
+          <p>Creative poster and logo designs made using Photoshop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p class="section-subtitle">Let’s work together or just say hello! 👋</p>
+    <form action="#" method="post" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== Testimonials Section ===== -->
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+    <p class="section-subtitle">What people say about working with me.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Mark is a passionate and dedicated learner. He brings creativity and precision into every project!"</p>
+        <h4>- Mentor</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"His portfolio designs are modern and eye-catching. Excited to see his growth!"</p>
+        <h4>- Fellow Developer</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"A problem solver with a creative mindset. He’s on his way to becoming a strong professional."</p>
+        <h4>- Friend & Collaborator</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Call To Action ===== -->
+  <section class="cta">
+    <h2>Let’s Build Something Amazing Together</h2>
+    <p>Got an idea or project? I’d love to hear about it and bring it to life.</p>
+    <a href="#contact" class="btn-primary">Get in Touch</a>
+  </section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Munteh Mark. All Rights Reserved.</p>
+    <div class="footer-socials">
+      <a href="https://github.com/"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </footer>
+  <script>
+      // Smooth Scroll for Navigation Links
+document.querySelectorAll('header nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
+// Scroll Reveal Animations
+const revealElements = document.querySelectorAll("section, .stat-card, .project-card, .testimonial-card");
+
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  revealElements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Hover Tilt Effect on Project Cards
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    const { offsetWidth: width, offsetHeight: height } = card;
+    const { offsetX: x, offsetY: y } = e;
+    const moveX = (x / width - 0.5) * 10;
+    const moveY = (y / height - 0.5) * 10;
+    card.style.transform = `rotateY(${moveX}deg) rotateX(${moveY * -1}deg)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateY(0) rotateX(0)";
+  });
+});
+s
+  </script>
+</body>
